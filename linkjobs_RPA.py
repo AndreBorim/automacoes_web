@@ -26,27 +26,19 @@ driver.implicitly_wait(15)
 separator = " "
 
 def log_in_linkedin():
-    # Botão entre: /html/body/div[1]/main/p/a
-    # new_chat_elem = driver.find_element_by_xpath("/html/body/div[1]/main/p/a") #wait.until(EC.element_to_be_clickable((By.ID, "layer_1")))
-    # new_chat_elem.click()
-    # sleep(5)
     usr = "diegocastro27f@gmail.com"
     pwd = "growthintera34"
     
-    # Busca o campo de texto "Email" pelo ID e preenche com o input de usuario
     elem_usr = driver.find_element_by_xpath("//*[@id='username']")
     elem_usr.send_keys(usr)
     sleep(1)
     
-    # Busca o campo de texto "Email" pelo ID e preenche com o input de senha
     elem_psw = driver.find_element_by_xpath("//*[@id='password']")
     elem_psw.send_keys(pwd)
     sleep(1)
     
-    # Pressiona a tecla "ENTER" para acessar o facebook
     elem_psw.send_keys(Keys.RETURN)
     sleep(5)
-    
     
     open_perfil = driver.find_element_by_xpath("/html/body/div/div/div[1]/div/div[3]/section/div[2]/div/div/div[1]/div[1]/div[1]/div/div[2]/form/ol/li[1]/div/article/div/article/div/div/div[1]/section/div/div[2]/span/span[1]/div/a")
     open_perfil.click()
