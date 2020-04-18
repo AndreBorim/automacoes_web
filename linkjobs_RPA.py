@@ -26,8 +26,8 @@ driver.implicitly_wait(15)
 separator = " "
 
 def log_in_linkedin():
-    usr = "diegocastro27f@gmail.com"
-    pwd = "growthintera34"
+    usr = "user@gmail.com"
+    pwd = "password"
     
     elem_usr = driver.find_element_by_xpath("//*[@id='username']")
     elem_usr.send_keys(usr)
