@@ -116,7 +116,7 @@ def excel_data():
     
     df.to_excel("Creditas-back-2-teste-oficial.xlsx")
 
-def testing(names, emails, last_names, citys, state,  phones, linkedins):
+def apply_perfils(names, emails, last_names, citys, state,  phones, linkedins):
     states = {
     ' Acre' : 2 ,
     ' Alagoas' : 3 ,
@@ -182,6 +182,6 @@ while True:
     excel_data()
     
 for i in range(len(perfil_names)):
-    testing(perfil_names[i].split(" ")[0], perfil_emails[i], separator.join(perfil_names[i].split(" ")[1:]), perfil_states[i].split(",")[0], perfil_states[i].split(",")[1], perfil_phones[i].replace("-", "").replace("+55", "").replace("+5555", "").replace(" ", "").replace("(", "").replace(")", ""), perfil_urls[i])
+    apply_perfils(perfil_names[i].split(" ")[0], perfil_emails[i], separator.join(perfil_names[i].split(" ")[1:]), perfil_states[i].split(",")[0], perfil_states[i].split(",")[1], perfil_phones[i].replace("-", "").replace("+55", "").replace("+5555", "").replace(" ", "").replace("(", "").replace(")", ""), perfil_urls[i])
     print(i)
         
